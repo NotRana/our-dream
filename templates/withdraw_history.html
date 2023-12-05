@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Withdrawal History</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Wallet Type</th>
+                    <th scope="col">Wallet Number</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in withdraw_history %}
+                    <tr>
+                        <td>{{ record.wallettype }}</td>
+                        <td>{{ record.walletno }}</td>
+                        <td>{{ record.amount }}</td>
+                        <td>{{ record.status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and jQuery CDN links (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+{% endblock %}

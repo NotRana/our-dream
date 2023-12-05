@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1>Task Details</h1>
+    <p class="lead">Follow these steps to complete the task:</p>
+    <ol>
+        <li>Open this link: <a href="{{ task.video_url }}" target="_blank">{{ task.video_url }}</a></li>
+        <li>Like the video</li>
+        <li>Take a screenshot and upload it here</li>
+    </ol>
+    <h4>Task Number: {{ task.taskno }}</h4>
+
+    <form action="{{ url_for('task_interact', tasknumber=task.taskno) }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="image">Upload Screenshot</label>
+            <input type="file" class="form-control-file" id="image" name="image">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Image</button>
+    </form>
+</div>
+{% endblock %}

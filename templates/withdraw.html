@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+            <form action="/withdraw" method="post">
+                <div class="form-group">
+                    <label for="walletno">Wallet Number:</label>
+                    <input type="text" class="form-control" id="walletno" name="walletno" required>
+                </div>
+              <select id="select_wallet" name="select_wallet">
+                <option value="jazzcash">JazzCash</option>
+                <option value="easypasa">Easypasa</option>
+              </select>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="text" class="form-control" id="amount" name="amount" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Withdraw</button>
+              
+          
+        
+</form>
+
+
+{% endblock %}

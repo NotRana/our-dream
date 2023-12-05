@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deposit Requests</title>
+</head>
+<body>
+    <h1>Pending Deposit Requests</h1>
+    <table>
+      <thead>
+          <tr>
+              <th>User Phone</th>
+              <th>Wallet Number</th>
+              <th>Transection ID</th>
+              <th>Wallet Type</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Image</th>
+          </tr>
+      </thead>
+        <!-- Table headers -->
+        <tbody>
+            {% for request in requests %}
+                <tr>
+                    <!-- Display request data -->
+                    <td>{{ request.userphonenumber }}</td>
+                    <td>{{ request.walletno }}</td>
+                    <td>{{ request.transectionid }}</td>
+                    <td>{{ request.wallettype }}</td>
+                    <td>{{ request.amount }}</td>
+                    <td>{{ request.status }}</td>
+                    <td>
+                        <!-- Display the image with a low width -->
+                        <img class="task-image" src="{{ url_for('static', filename='SSFOLDER/' + request.image_path) }}" alt="Task Image">
+                    </td>
+                    <td>
+                        <form action="{{ url_for('update_deposit_status', request_id=request._id) }}" method="post">
+                            <button type="submit">Mark as Done</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

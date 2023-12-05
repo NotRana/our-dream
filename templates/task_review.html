@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        /* Adjust image width */
+        .task-image {
+            max-width: 100px; /* Set the maximum width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h1>Pending Tasks</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Task Number</th>
+                <th>User Phone</th>
+                <th>Image</th>
+                <th>button</th>
+                <!-- Add other necessary columns -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.taskno }}</td>
+                    <td>{{ task.phonenumber }}</td>
+                    <td>
+                        <!-- Display the image with a low width -->
+                        <img class="task-image" src="{{ url_for('static', filename='Uploads/' + task.image_path) }}" alt="Task Image">
+                    </td>
+                    <td>
+                      <form action="{{ url_for('update_task_status', task_id=task._id) }}" method="post">
+                          <button type="submit">Update Status & Add Balance</button>
+                      </form>
+                    </td>
+                    <!-- Add other necessary columns -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

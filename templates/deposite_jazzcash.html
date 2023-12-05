@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <form action="/deposite_jazzcash" method="post" enctype="multipart/form-data">
+        <h1>Deposite Money</h1>
+        <h2>Details:</h2>
+        <p>Step 1: Copy Payment information</p>
+        <p>Step 2: Transfer the amount you want to recharge to us through Jazzcash transfer</p>
+        <p>Step 3: Please Transection ID and upload the payment proof to complete the recharge</p>
+        <h3>Account Number: 03246723596</h3>
+        <div class="form-group">
+            <label for="walletno">Your Wallet No:</label>
+            <input type="text" class="form-control" id="walletno" name="walletno" required>
+        </div>
+        <div class="form-group">
+            <label for="transectionid">Transaction ID:</label>
+            <input type="text" class="form-control" id="transectionid" name="transectionid" required>
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Enter Amount:</label>
+            <input type="text" class="form-control" id="amount" name="amount" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Deposit</button>
+    </form>
+{% endblock %}

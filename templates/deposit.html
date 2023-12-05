@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h3>Choose payment portal to make your deposite</h3>
+<a class="btn btn-primary m-3"  href="{{ url_for('deposite_jazzcash') }}">JazzCash</a>
+<a class="btn btn-primary m-3"  href="{{ url_for('deposite_easypasa') }}">EasyPaisa</a>
+
+
+{% endblock %}

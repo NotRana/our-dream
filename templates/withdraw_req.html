@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Withdraw Requests</title>
+</head>
+<body>
+    <h1>Pending Withdrawal Requests</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User Phone</th>
+                <th>Wallet Number</th>
+                <th>Amount</th>
+                <th>Wallet Type</th>
+                <th>Status</th>
+                <th>button</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %}
+                <tr>
+                    <td>{{ request.userphone }}</td>
+                    <td>{{ request.walletno }}</td>
+                    <td>{{ request.amount }}</td>
+                    <td>{{ request.wallettype }}</td>
+                    <td>{{ request.status }}</td>
+                    <td>
+                        <form action="{{ url_for('update_status', request_id=request._id) }}" method="post">
+                            <button type="submit">Mark as Done</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

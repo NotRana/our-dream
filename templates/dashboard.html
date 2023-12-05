@@ -1,0 +1,233 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://images.unsplash.com/photo-1697022976768-2fd7f4e4c399?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://images.unsplash.com/photo-1556723968-e20bb3068a56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1503422673044-f82d00443ad3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="info bg-primary">
+        <div class="username m-2"><h5>Name: {{ phonenumber }}</h5></div>
+        <div class="task"><h5>Task: {{ task }} / {{ dailytask }}</h5></div>
+        <h5 class="balance m-2">Balance: {{account_balance }}</h5>
+      </div>
+      <div class="card-sec">
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Plan Price: 2,500Rs</li>
+            <li class="list-group-item">Total Videos: 3</li>
+            <li class="list-group-item">1 video = 30Rs</li>
+            <li class="list-group-item">Plan Validity: 60 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/1" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 5000</li>
+              <li class="list-group-item">Total Videos: 6</li>
+              <li class="list-group-item">1 video = 35Rs</li>
+              <li class="list-group-item">Plan Validity: 65 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/2" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://rana-cdn.notrana.repl.co/uploads/pkg3.jpg" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 8000Rs</li>
+              <li class="list-group-item">Total Videos: 8</li>
+              <li class="list-group-item">1 video = 40Rs</li>
+              <li class="list-group-item">Plan Validity: 70 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/3" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 12000Rs</li>
+              <li class="list-group-item">Total Videos: 10</li>
+              <li class="list-group-item">1 video = 50Rs</li>
+              <li class="list-group-item">Plan Validity: 75 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/4" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Plan Price: 15000Rs</li>
+                <li class="list-group-item">Total Videos: 11</li>
+                <li class="list-group-item">1 video = 52Rs</li>
+                <li class="list-group-item">Plan Validity: 80 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/5" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 20000Rs</li>
+              <li class="list-group-item">Total Videos: 15</li>
+              <li class="list-group-item">1 video = 50Rs</li>
+              <li class="list-group-item">Plan Validity: 85 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/6" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 25000Rs</li>
+              <li class="list-group-item">Total Videos: 17</li>
+              <li class="list-group-item">1 video = 55Rs</li>
+              <li class="list-group-item">Plan Validity: 90 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/7" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; height:auto;">
+            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 30000Rs</li>
+              <li class="list-group-item">Total Videos: 19</li>
+              <li class="list-group-item">1 video = 60Rs</li>
+              <li class="list-group-item">Plan Validity: 95 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/8" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 40000Rs</li>
+              <li class="list-group-item">Total Videos: 22</li>
+              <li class="list-group-item">1 video = 70Rs</li>
+              <li class="list-group-item">Plan Validity: 100 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/9" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 55000Rs</li>
+              <li class="list-group-item">Total Videos: 25</li>
+              <li class="list-group-item">1 video = 80Rs</li>
+              <li class="list-group-item">Plan Validity: 120 Days</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/10" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhcnN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Plan Price: 150000Rs</li>
+              <li class="list-group-item">Total Videos: 30</li>
+              <li class="list-group-item">1 video = 230Rs</li>
+              <li class="list-group-item">Plan Validity: 1 year</li>
+            </ul>
+            <div class="card-body">
+            <a href="https://our-dream.notrana.repl.co//buy_plan/11" class="card-link">Buy Plan</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+{% endblock %}
+    

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                
+                <p>Task Number: {{ task.get('taskno', 'No Task Number') }}</p>
+                <!-- Create a link that redirects to /task/taskno -->
+                <a href="{{ url_for('task_interact', tasknumber=task.get('taskno', 0)) }}">Complete task</a>
+              <br>
+              <br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

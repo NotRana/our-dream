@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Tasks</title>
+</head>
+<body>
+    <h1>Edit Tasks</h1>
+    <form action="/update_task" method="post">
+        {% for task in tasks %}
+            <div>
+                <label for="task{{ task.taskno }}">Task {{ task.taskno }}:</label>
+                <input type="text" id="task{{ task.taskno }}" name="task{{ task.taskno }}" value="{{ task.video_url }}">
+            </div>
+        {% endfor %}
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
