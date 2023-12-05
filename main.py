@@ -8,6 +8,7 @@ from werkzeug.utils import secure_filename
 from apscheduler.schedulers.background import BackgroundScheduler
 from bson import ObjectId
 import time
+import datetime
 
 mydb = os.environ['db']
 app = Flask(__name__, template_folder="templates")
@@ -196,6 +197,9 @@ def buy_plan(plan_number):
         11: {'price': 150000, 'total_videos': 30, 'days': 365},
         # Define other plan details here
     }
+    subscription_start = datetime.datetime.now()
+    subscription_end = subscription_start + datetime.timedelta(days=plan['days'])
+
 
     plan = plans.get(plan_number)
 
@@ -220,6 +224,8 @@ def buy_plan(plan_number):
                 users_collection.update_one({'phonenumber': session['phonenumber']}, {'$set': {'account_balance': new_balance}})
                 users_collection.update_one({'phonenumber': session['phonenumber']}, {'$set': {'subscribed_plan': f'plan{plan_number}'}})
                 users_collection.update_one({'phonenumber': session['phonenumber']}, {'$set': {'dailytask': total_videos}})
+                users_collection.update_one({'phonenumber': session['phonenumber']}, {'$set': {'subscription_start': subscription_start}})
+                users_collection.update_one({'phonenumber': session['phonenumber']}, {'$set': {'subscription_end': subscription_end}})
                 return "Plan subscribed successfully!"
             else:
                 return "Insufficient balance to buy the plan"
@@ -228,6 +234,8 @@ def buy_plan(plan_number):
     else:
         return redirect(url_for('login'))
 
+def is_subscription_expired(subscription_end_date):
+  return datetime.datetime.now() > subscription_end_date
 
 
 @app.route('/add_task')
